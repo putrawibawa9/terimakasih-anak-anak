@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenangan Kita - Kelas 6A</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Kenangan Kita di Kelas <span id="kelasName">6A</span> 🎈</h1>
+            <p class="hero-subtitle">Terima kasih sudah menjadi bagian dari perjalanan ini 💛</p>
+            <button class="btn-primary" id="scrollToForm">Tulis Pesan Kenangan</button>
+        </div>
+    </header>
+
+    <!-- Pesan dari Guru -->
+    <section class="teacher-message">
+        <div class="container">
+            <div class="card">
+                <h2>Pesan dari <span id="guruName">Pak Putra</span> 📝</h2>
+                <p>Anak-anakku yang luar biasa,</p>
+                <p>Rasanya baru kemarin kita bertemu untuk pertama kali di kelas ini. Kini, waktu berlalu begitu cepat dan kalian sudah siap melangkah ke jenjang berikutnya. Saya sangat bangga dengan setiap kemajuan yang kalian raih.</p>
+                <p>Ingatlah selalu bahwa belajar adalah petualangan tanpa akhir. Teruslah bertanya, teruslah bermimpi, dan jangan pernah takut untuk mencoba hal baru. Kalian semua istimewa dengan caranya masing-masing! ✨</p>
+                <p>Dengan penuh kasih sayang,<br><strong><span id="guruNameSign">Pak Putra</span></strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pesan dari Kalian (Google Form) -->
+    <section class="messages" id="messageForm">
+        <div class="container">
+            <h2>Pesan dari Kalian 💬</h2>
+            <p class="section-description">Isi form di bawah untuk meninggalkan pesan kenanganmu kepada teman dan guru!</p>
+            <div class="form-wrapper">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSda0TtS-CM60ad36u-9i2hOR7qeQCow3oYywCcp6gikptsPuQ/viewform?embedded=true"
+                        width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">
+                    Memuat…
+                </iframe>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Kenangan -->
+    <section class="timeline">
+        <div class="container">
+            <h2>Kenangan Kita Bersama 🌟</h2>
+            <div class="timeline-grid">
+                <div class="timeline-card card-1">
+                    <div class="timeline-emoji">🏖️</div>
+                    <h3>Piknik ke Pantai</h3>
+                    <p>Main pasir, berenang, dan makan bakso bersama!</p>
+                </div>
+                <div class="timeline-card card-2">
+                    <div class="timeline-emoji">💻</div>
+                    <h3>Belajar Coding</h3>
+                    <p>Membuat game sederhana dan website pertama kita.</p>
+                </div>
+                <div class="timeline-card card-3">
+                    <div class="timeline-emoji">🎭</div>
+                    <h3>Pentas Drama</h3>
+                    <p>Penampilan luar biasa di acara perayaan sekolah!</p>
+                </div>
+                <div class="timeline-card card-4">
+                    <div class="timeline-emoji">🎨</div>
+                    <h3>Lomba Mewarnai</h3>
+                    <p>Karya seni terbaik yang penuh kreativitas.</p>
+                </div>
+                <div class="timeline-card card-5">
+                    <div class="timeline-emoji">📚</div>
+                    <h3>Lomba Cerdas Cermat</h3>
+                    <p>Kerja sama tim yang kompak dan seru!</p>
+                </div>
+                <div class="timeline-card card-6">
+                    <div class="timeline-emoji">🎉</div>
+                    <h3>Pesta Perpisahan</h3>
+                    <p>Momen terindah yang tak akan terlupakan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Guru -->
+    <section class="about-teacher">
+        <div class="container">
+            <div class="card about-card">
+                <h2>Tentang Guru Kalian 👨‍🏫</h2>
+                <p>Saya, <strong><span id="guruNameAbout">Pak Putra</span></strong>, merasa sangat bangga pernah menjadi bagian dari perjalanan kalian. Mengajar kalian bukan hanya tentang berbagi ilmu, tapi juga tentang belajar menjadi manusia yang lebih baik setiap harinya.</p>
+                <p>Kalian telah mengajarkan saya arti kesabaran, ketulusan, dan kebahagiaan sederhana. Setiap tawa, setiap pertanyaan, dan setiap pencapaian kalian adalah hadiah berharga bagi saya.</p>
+                <p><strong>Teruslah bermimpi dan belajar tanpa henti! 🌟</strong></p>
+                <p>Ingat, pintu kelas ini akan selalu terbuka untuk kalian. Jangan ragu untuk kembali dan berbagi cerita tentang petualangan baru kalian!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Dibuat dengan ❤️ oleh <span id="guruNameFooter">Pak Putra</span> untuk murid-murid <span id="sekolahName">SD Harapan Bangsa</span></p>
+            <p class="footer-year">© <span id="currentYear"></span></p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke Atas">⬆️</button>
+
+    <script src="app.js"></script>
+</body>
+</html>

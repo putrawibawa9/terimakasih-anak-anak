@@ -1,0 +1,364 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #FFF8E7;
+    color: #073B4C;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Baloo 2', cursive;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #FFD166 0%, #06D6A0 100%);
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '🎈';
+    position: absolute;
+    font-size: 100px;
+    opacity: 0.1;
+    top: 20px;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero::after {
+    content: '🌟';
+    position: absolute;
+    font-size: 80px;
+    opacity: 0.1;
+    bottom: 40px;
+    right: 15%;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: #073B4C;
+    margin-bottom: 15px;
+    font-weight: 700;
+    animation: fadeInDown 0.8s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #073B4C;
+    margin-bottom: 30px;
+    font-weight: 400;
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #EF476F;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(239, 71, 111, 0.3);
+    font-family: 'Baloo 2', cursive;
+}
+
+.btn-primary:hover {
+    background-color: #118AB2;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(17, 138, 178, 0.4);
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Teacher Message Section */
+.teacher-message {
+    padding: 60px 20px;
+}
+
+.teacher-message .card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.teacher-message h2 {
+    color: #118AB2;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.teacher-message p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Messages Section (Google Form) */
+.messages {
+    padding: 60px 20px;
+    background-color: #FFFFFF;
+}
+
+.messages h2 {
+    text-align: center;
+    color: #EF476F;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #073B4C;
+}
+
+.form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper iframe {
+    display: block;
+    border: none;
+    min-height: 600px;
+}
+
+/* Timeline Section */
+.timeline {
+    padding: 60px 20px;
+}
+
+.timeline h2 {
+    text-align: center;
+    color: #06D6A0;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-top: 5px solid;
+}
+
+.timeline-card.card-1 { border-top-color: #FFD166; }
+.timeline-card.card-2 { border-top-color: #06D6A0; }
+.timeline-card.card-3 { border-top-color: #118AB2; }
+.timeline-card.card-4 { border-top-color: #EF476F; }
+.timeline-card.card-5 { border-top-color: #FFD166; }
+.timeline-card.card-6 { border-top-color: #06D6A0; }
+
+.timeline-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-emoji {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.timeline-card h3 {
+    color: #073B4C;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.timeline-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* About Teacher Section */
+.about-teacher {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #118AB2 0%, #06D6A0 100%);
+}
+
+.about-card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-card h2 {
+    color: #118AB2;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Footer */
+.footer {
+    background-color: #073B4C;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.footer-year {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #EF476F;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(239, 71, 111, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #118AB2;
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .btn-primary {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .card {
+        padding: 25px;
+    }
+    
+    .timeline-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 15px;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    section {
+        padding: 40px 15px;
+    }
+}
