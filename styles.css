@@ -362,3 +362,34 @@ h1, h2, h3 {
         padding: 40px 15px;
     }
 }
+
+
+
+
+/* section sosmed */
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f5f5f5;
+  border-radius: 9999px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  background: #e0e0e0;
+}
+
+.social-btn img {
+  filter: invert(20%);
+}
+
+.social-btn.instagram:hover { background: #feda75; }
+.social-btn.tiktok:hover { background: #69c9d0; }
+.social-btn.facebook:hover { background: #1877f2; color: white; }
+.social-btn.whatsapp:hover { background: #25d366; color: white; }
