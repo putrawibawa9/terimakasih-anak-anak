@@ -67,3 +67,39 @@ document.querySelectorAll(".card, .timeline-card").forEach((element) => {
   element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
   observer.observe(element);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("bgMusic");
+  const startAt = 70;
+
+  // Pastikan file sudah siap diputar
+  audio.addEventListener("canplaythrough", () => {
+    // coba autoplay langsung saat file siap
+    const tryAutoplay = () => {
+      audio.currentTime = startAt;
+      audio
+        .play()
+        .then(() => {
+          console.log("Music started (autoplay allowed)");
+        })
+        .catch((err) => {
+          console.log("Autoplay blocked, will wait for user interaction:", err);
+          // fallback: mainkan saat user klik/tap halaman (sekali saja)
+          const playOnInteraction = () => {
+            audio.currentTime = startAt;
+            audio
+              .play()
+              .then(() => console.log("Music started after interaction"))
+              .catch((e) => console.log("Failed to play after interaction", e));
+            document.removeEventListener("click", playOnInteraction);
+            document.removeEventListener("touchstart", playOnInteraction);
+          };
+
+          document.addEventListener("click", playOnInteraction);
+          document.addEventListener("touchstart", playOnInteraction);
+        });
+    };
+
+    tryAutoplay();
+  });
+});

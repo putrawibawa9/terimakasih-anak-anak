@@ -19,6 +19,34 @@
             <a href="#messageForm"class="btn-primary">Tulis Pesan Kenangan</a>
         </div>
     </header>
+<audio id="bgMusic" src="music.mp3"></audio>
+
+    <!-- Added Play Song Section -->
+<section class="play-song" style="padding: 3rem 1rem; background: #f8f8f8;">
+  <div class="container" style="text-align:center;">
+    <div class="card" style="padding:2rem; display:flex; flex-direction:column; align-items:center; gap:1rem;">
+      <h2>Putar Lagu  🎵</h2>
+      <p>Klik tombol di bawah untuk memutar lagu .</p>
+      <button id="playSongBtn" class="btn-primary" style="cursor:pointer; padding:0.7rem 1.5rem; border:none; border-radius:8px; font-size:1rem;">▶️ Putar Lagu</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const bgMusic = document.getElementById('bgMusic');
+  const playBtn = document.getElementById('playSongBtn');
+
+  playBtn.addEventListener('click', () => {
+    if (bgMusic.paused) {
+      bgMusic.play();
+      playBtn.textContent = "⏸️ Jeda Lagu";
+    } else {
+      bgMusic.pause();
+      playBtn.textContent = "▶️ Putar Lagu";
+    }
+  });
+</script>
+
 
     <!-- Pesan dari Guru -->
     <section class="teacher-message">
@@ -205,6 +233,14 @@
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Kembali ke Atas">⬆️</button>
 
+    <audio id="bgMusic" src="lagu.mp3"></audio>
     <script src="app.js"></script>
+  <script>
+
+</script>
+
+
+
+
 </body>
 </html>
